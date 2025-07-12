@@ -9,8 +9,8 @@ spec:
   interval: 1h
   timeout: 15m
   chartRef:
-    kind: HelmRepository
-    name: rook-release
+    kind: HelmChart
+    name: rook-ceph-operator
   install:
     remediation:
       retries: -1
