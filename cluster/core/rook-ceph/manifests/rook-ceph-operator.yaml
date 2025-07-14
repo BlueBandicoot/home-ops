@@ -20,13 +20,9 @@ spec:
       enableCephfsDriver: false
       enableCephfsSnapshotter: false
       enableLiveness: true
-      serviceMonitor:
-        enabled: true
     enableDiscoveryDaemon: true
     image:
       repository: ghcr.io/rook/ceph
-    monitoring:
-      enabled: true
     resources:
       requests:
         memory: 128Mi # unchangable
