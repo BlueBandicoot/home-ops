@@ -4,5 +4,4 @@ kind: Kustomization
 metadata:
   name: core-apps
   namespace: flux-system
-components:
-  - "rook-ceph" 
+components: # - "rook-ceph" 
