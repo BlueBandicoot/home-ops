@@ -1,8 +1,7 @@
----
 apiVersion: v1
 kind: Namespace
 metadata:
   creationTimestamp: null
-  name: observability
+  name: adguard-home
 spec: {}
 status: {}

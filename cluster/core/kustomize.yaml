@@ -4,4 +4,11 @@ kind: Kustomization
 metadata:
   name: core-apps
   namespace: flux-system
-components: # - "rook-ceph" 
+components:
+  # - "rook-ceph"
+  - kyverno
+  - multus
+  - cilium
+  - cert-manager
+  - local-path-provisioner
+  - observability
