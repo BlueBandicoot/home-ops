@@ -1,18 +1,25 @@
 # home-ops
 
-## Core Apps
-+ Storage
-    ++ Rook-Ceph
-+ CNI
-    ++ Cilium ( + Multus )
-+ Ingress
-    ++ GatewayAPI ( Cilium )
-+ Cert-Manager
-    ++ Cert-Manager
+## Structure
 
-Home Assistant
-ESPHome
-Mealie
-Zigbee2MQTT
-Wireguard
-AdGuard
+<pre>
+.
+├── apps
+│   ├── adguard-home
+│   ├── cnpg
+│   ├── esphome
+│   ├── home-assistant
+│   ├── kustomize.yaml
+│   ├── mealie
+│   └── wireguard
+├── core
+│   ├── cert-manager
+│   ├── cilium
+│   ├── kyverno
+│   ├── local-path-provisioner
+│   ├── multus
+│   └── observability
+└── flux-system
+    ├── flux-instance.yaml
+    ├── helm-repositories
+</pre>
