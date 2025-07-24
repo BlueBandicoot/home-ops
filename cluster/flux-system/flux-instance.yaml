@@ -18,12 +18,12 @@ spec:
     ref: "refs/heads/main"
     path: "cluster/flux-system"
   components:
-    - source-controller
-    - kustomize-controller
-    - helm-controller
-    - notification-controller
-    - image-reflector-controller
-    - image-automation-controller
+  - source-controller
+  - kustomize-controller
+  - helm-controller
+  - notification-controller
+  - image-reflector-controller
+  - image-automation-controller
   cluster:
     type: kubernetes
     multitenant: false
@@ -31,9 +31,9 @@ spec:
     domain: "cluster.local"
   kustomize:
     patches:
-      - target:
-        kind: Deployment
-        name: "(kustomize-controller|helm-controller)"
+    - target:
+      kind: Deployment
+      name: "(kustomize-controller|helm-controller)"
       patch: |
         - op: add
           path: /spec/template/spec/containers/0/args/-
