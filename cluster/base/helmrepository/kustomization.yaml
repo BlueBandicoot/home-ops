@@ -9,4 +9,4 @@ resources:
 - ./cert-manager.yaml
 - ./cilium.yaml
 - ./cloudnativepg.yaml
-- ./ mealie.yaml
+- ./mealie.yaml
