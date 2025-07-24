@@ -5,7 +5,7 @@ kind: Kustomization
 metadata:
   name: src
   namespace: flux-system
-components:
+resources:
 - ./cert-manager.yaml
 - ./cilium.yaml
 - ./cloudnativepg.yaml
