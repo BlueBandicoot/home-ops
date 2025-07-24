@@ -6,8 +6,8 @@ metadata:
   name: cluster-src
   namespace: flux-system
 spec:
-  interval: 1h
-  path: ./cluster/flux-system/helm-repositories
+  interval: 1m
+  path: ./cluster/base
   prune: true
   retryInterval: 2m
   sourceRef:
@@ -32,6 +32,8 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
+  dependsOn:
+  - name: cluster-src
   timeout: 5m
   wait: false
 
