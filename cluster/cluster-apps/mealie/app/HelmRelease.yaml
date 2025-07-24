@@ -15,14 +15,22 @@ spec:
         namespace: flux-system
   interval: 1m0s
   values:
+    controllers:
+      main:
+        enabled: true
+        containers:
+          main:
+            image:
+              repository: ghcr.io/mealie-recipes/mealie
+              # -- image tag
+              # @default -- chart.appVersion
+              tag: '2.1.0'
+              pullPolicy: IfNotPresent
+            env:
+              TZ: Europe/Brussels
     ingress:
-      # -- Enable and configure ingress settings for the chart under this key.
-      # @default -- See values.yaml
       main:
         enabled: false
-
-    # -- Configure persistence settings for the chart under this key.
-    # @default -- See values.yaml
     persistence:
       data:
         enabled: true
@@ -30,8 +38,6 @@ spec:
         size: 10Gi
         advancedMounts:
           main:
-            # the controller with the "main" identifier
             main:
-            # the container with the "main" identifier
             - path: /app/data/
               readOnly: false
