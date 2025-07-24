@@ -6,7 +6,7 @@ metadata:
   name: apps
   namespace: flux-system
 components:
-- "mealie"
-- "home-assistant"
-- "adguard-home"
-- "esphome"
+- mealie
+- home-assistant
+- adguard-home
+- esphome
