@@ -5,10 +5,14 @@ metadata:
   name: mealie
   namespace: mealie
 spec:
-  chartRef:
-    kind: HelmRepository
-    name: truecharts
-    namespace: flux-system
+  chart:
+    spec:
+      chart: mealie
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: truecharts
+        namespace: flux-system
   interval: 1m0s
   values:
     image:
