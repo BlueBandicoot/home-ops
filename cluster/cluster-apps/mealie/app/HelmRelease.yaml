@@ -6,8 +6,8 @@ metadata:
   namespace: mealie
 spec:
   chartRef:
-    kind: OCIRepository
-    name: mealie
+    kind: HelmRepository
+    name: truecharts
     namespace: flux-system
   interval: 1m0s
   values:
