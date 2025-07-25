@@ -10,3 +10,4 @@ resources:
 - ./cilium.yaml
 - ./cloudnativepg.yaml
 - ./kyverno.yaml
+- ./truecharts.yaml
