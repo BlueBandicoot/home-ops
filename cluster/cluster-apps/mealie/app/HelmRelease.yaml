@@ -5,14 +5,10 @@ metadata:
   name: mealie
   namespace: mealie
 spec:
-  chart:
-    spec:
-      chart: mealie
-      reconcileStrategy: ChartVersion
-      sourceRef:
-        kind: OCIRepository
-        name: mealie
-        namespace: flux-system
+  chartRef:
+    kind: OCIRepository
+    name: mealie
+    namespace: flux-system
   interval: 1m0s
   values:
     image:
