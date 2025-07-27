@@ -3,13 +3,53 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
+  name: cluster-base
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./cluster/base
+  prune: true
+  retryInterval: 2m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  timeout: 5m
+  wait: false
+---
+# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/kustomize.toolkit.fluxcd.io/kustomization_v1.json
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cluster-core
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./cluster/core
+  prune: true
+  retryInterval: 2m
+  dependsOn:
+  - name: cluster-base
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
+  timeout: 5m
+  wait: false
+---
+# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/kustomize.toolkit.fluxcd.io/kustomization_v1.json
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
   name: cluster-apps
   namespace: flux-system
 spec:
   interval: 1m
-  path: ./cluster/cluster-apps
+  path: ./cluster/apps
   prune: true
   retryInterval: 2m
+  dependsOn:
+  - name: cluster-core
   sourceRef:
     kind: GitRepository
     name: flux-system
