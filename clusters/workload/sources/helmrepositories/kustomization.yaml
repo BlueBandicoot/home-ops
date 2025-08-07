@@ -6,14 +6,13 @@ metadata:
   name: sources
   namespace: flux-system
 resources:
-  - ./prometheus-community.yaml
-  - ./truecharts.yaml
-  - ./kyverno.yaml
-  - ./falcosecurity.yaml
-  - ./grafana.yaml
-  - ./rook-ceph.yaml
+  - ./cert-manager.yaml
   - ./cilium.yaml
   - ./cnpg.yaml
-  - ./cert-manager.yaml
+  - ./falcosecurity.yaml
+  - ./grafana.yaml
+  - ./kyverno.yaml
+  - ./prometheus-community.yaml
+  - ./rook-ceph.yaml
   - ./spegel.yaml
   - ./truecharts.yaml
