@@ -17,6 +17,3 @@ spec:
     - "eno1"
   externalIPs: true
   nodeSelector: {}
-  gatewaySelector:
-    matchLabels:
-      gateway.networking.k8s.io/name: internal
