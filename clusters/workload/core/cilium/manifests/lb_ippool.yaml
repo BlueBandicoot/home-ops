@@ -15,5 +15,5 @@ metadata:
 spec:
   interfaces:
     - "eno1"
-  externalIPs: true
+  loadBalancerIPs: true
   nodeSelector: {}
