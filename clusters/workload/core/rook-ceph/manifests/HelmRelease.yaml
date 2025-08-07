@@ -51,9 +51,6 @@ spec:
     cephClusterSpec:
       dashboard:
         enabled: true
-    configOverride: |
-      [global]
-      osd_pool_default_size: "1"
     route:
       # -- Enable an HTTPRoute for the ceph-dashboard
       dashboard:
