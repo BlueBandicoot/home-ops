@@ -1,0 +1,19 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: sources
+  namespace: flux-system
+resources:
+  - ./prometheus-community.yaml
+  - ./truecharts.yaml
+  - ./kyverno.yaml
+  - ./falcosecurity.yaml
+  - ./grafana.yaml
+  - ./rook-ceph.yaml
+  - ./cilium.yaml
+  - ./cnpg.yaml
+  - ./cert-manager.yaml
+  - ./spegel.yaml
+  - ./truecharts.yaml
