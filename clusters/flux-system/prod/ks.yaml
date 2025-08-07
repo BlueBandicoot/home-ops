@@ -21,30 +21,6 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: cluster-base
-  namespace: flux-system
-spec:
-  interval: 1m
-  path: ./clusters/workload/base
-  prune: true
-  retryInterval: 2m
-  dependsOn:
-    - name: cluster-sources
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-    namespace: flux-system
-  # decryption:
-  #   provider: sops
-  #   secretRef:
-  #     name: sops-gpg
-  timeout: 5m
-  wait: false
----
-# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/kustomize.toolkit.fluxcd.io/kustomization_v1.json
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
   name: cluster-core
   namespace: flux-system
 spec:
@@ -53,7 +29,7 @@ spec:
   prune: true
   retryInterval: 2m
   dependsOn:
-    - name: cluster-base
+    - name: cluster-sources
   sourceRef:
     kind: GitRepository
     name: flux-system
