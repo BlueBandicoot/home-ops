@@ -20,3 +20,6 @@ spec:
             name: tls-secret-grafana
           - kind: Secret
             name: tls-secret-rook
+      allowedRoutes:
+        namespaces:
+          from: All
