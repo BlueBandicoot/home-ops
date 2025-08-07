@@ -8,6 +8,7 @@ metadata:
 spec:
   dependsOn:
     - name: cilium
+      namespace: kube-system
   chart:
     spec:
       chart: cert-manager
