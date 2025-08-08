@@ -36,7 +36,7 @@ spec:
       route:
         main:
           enabled: true
-          hostnames: "alertmanager.kharnox.com"
+          hostnames: ["alertmanager.kharnox.com"]
           parentRefs:
             - name: internal
               namespace: kube-system
@@ -64,7 +64,7 @@ spec:
       route:
         main:
           enabled: true
-          hostnames: "prometheus.kharnox.com"
+          hostnames: ["prometheus.kharnox.com"]
           parentRefs:
             - name: internal
               namespace: kube-system
