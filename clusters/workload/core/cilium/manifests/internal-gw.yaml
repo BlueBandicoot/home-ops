@@ -15,12 +15,16 @@ spec:
     - name: https
       protocol: HTTPS
       port: 443
-      hostname: rook.kharnox.com
+      hostname: "*.kharnox.com"
       tls:
         mode: Terminate
         certificateRefs:
           - kind: Secret
             name: tls-secret-rook
+          - kind: Secret
+            name: tls-secret-prometheus
+          - kind: Secret
+            name: tls-secret-alertmanager
       allowedRoutes:
         namespaces:
           from: All
