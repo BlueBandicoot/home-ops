@@ -42,6 +42,9 @@ spec:
         certificateRefs:
           - kind: Secret
             name: tls-secret-alertmanager
+      allowedRoutes:
+        namespaces:
+          from: All
     - name: https-grafana
       protocol: HTTPS
       port: 443
@@ -51,3 +54,6 @@ spec:
         certificateRefs:
           - kind: Secret
             name: tls-secret-grafana
+      allowedRoutes:
+        namespaces:
+          from: All
