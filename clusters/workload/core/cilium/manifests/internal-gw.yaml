@@ -42,3 +42,12 @@ spec:
         certificateRefs:
           - kind: Secret
             name: tls-secret-alertmanager
+    - name: https-grafana
+      protocol: HTTPS
+      port: 443
+      hostname: "grafana.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: tls-secret-grafana
