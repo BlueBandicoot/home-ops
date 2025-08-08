@@ -15,6 +15,7 @@ spec:
     - name: https
       protocol: HTTPS
       port: 443
+      hostname: "*.kharnox.com"
       tls:
         mode: Terminate
         certificateRefs:
