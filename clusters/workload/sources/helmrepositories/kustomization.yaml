@@ -16,3 +16,4 @@ resources:
   - ./rook-ceph.yaml
   - ./spegel.yaml
   - ./truecharts.yaml
+  - ./stakater.yaml
