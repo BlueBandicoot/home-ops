@@ -12,19 +12,33 @@ spec:
     - name: http
       protocol: HTTP
       port: 80
-    - name: https
+    - name: https-rook
       protocol: HTTPS
       port: 443
-      hostname: "*.kharnox.com"
+      hostname: "rook.kharnox.com"
       tls:
         mode: Terminate
         certificateRefs:
           - kind: Secret
             name: tls-secret-rook
+    - name: https-prometheus
+      protocol: HTTPS
+      port: 443
+      hostname: "prometheus.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
           - kind: Secret
             name: tls-secret-prometheus
-          - kind: Secret
-            name: tls-secret-alertmanager
       allowedRoutes:
         namespaces:
           from: All
+    - name: https-alertmanager
+      protocol: HTTPS
+      port: 443
+      hostname: "alertmanager.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: tls-secret-alertmanager
