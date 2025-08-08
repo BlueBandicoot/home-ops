@@ -51,6 +51,7 @@ spec:
     cephClusterSpec:
       dashboard:
         enabled: true
+        ssl: false
     route:
       # -- Enable an HTTPRoute for the ceph-dashboard
       dashboard:
