@@ -89,4 +89,4 @@ spec:
         parentRefs:
           - name: internal
             namespace: kube-system
-            sectionName: https
+            sectionName: https-rook
