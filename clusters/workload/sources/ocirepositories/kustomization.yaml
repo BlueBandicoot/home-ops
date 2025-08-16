@@ -8,3 +8,4 @@ metadata:
 resources:
   - ./grafana.yaml
   - ./loki.yaml
+  - ./alloy.yaml
