@@ -30,8 +30,9 @@ spec:
             env:
               TZ: Europe/Brussels
               HASS_SERVER: http://localhost:8123
-            #   HASS_HTTP_TRUSTED_PROXY_1: 10.244.0.48
-            #   HASS_HTTP_TRUSTED_PROXY_2: 10.42.0.0/16
+              HASS_HTTP_X_FORWARDED_FOR: true
+              HASS_HTTP_TRUSTED_PROXY_1: 10.244.0.48
+              HASS_HTTP_TRUSTED_PROXY_2: 10.42.0.0/16
             # envFrom:
             #   - secretRef:
             #       name: "ha-secret"
