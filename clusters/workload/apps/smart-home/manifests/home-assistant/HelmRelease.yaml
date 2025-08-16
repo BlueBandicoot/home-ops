@@ -45,6 +45,34 @@ spec:
                 cpu: 10m
               limits:
                 memory: 2Gi
+          code-server:
+            image:
+              repository: ghcr.io/coder/code-server
+              tag: 4.103.1@sha256:fc1d8a57dc5ca5fab67999416165d994ab78a7338b046c4b29f168033a6b7b38
+            args:
+              - --auth
+              - none
+              - --disable-telemetry
+              - --disable-update-check
+              - --user-data-dir
+              - /config/.code-server
+              - --extensions-dir
+              - /config/.code-server
+              - --port
+              - "12321"
+              - /config
+            env:
+              HASS_SERVER: http://localhost:8123
+              # HASS_TOKEN:
+              #   secretKeyRef:
+              #     name: home-assistant-secret
+              #     key: vscode_hass_token
+            resources:
+              requests:
+                cpu: 10m
+              limits:
+                memory: 1Gi
+
     defaultPodOptions:
       securityContext:
         runAsNonRoot: true
@@ -59,15 +87,35 @@ spec:
             port: 8123
         annotations:
           lbipam.cilium.io/ips: 192.168.129.175
+      code-server:
+        ports:
+          code-server:
+            port: 12321
     route:
       app:
         hostnames:
           - "ha.kharnox.com"
-          - ha.kharnox.com
         parentRefs:
           - name: internal
             namespace: kube-system
             sectionName: https-ha
+        rules:
+          - matches:
+              - path:
+                  type: PathPrefix
+                  value: /code/
+            filters:
+              - type: URLRewrite
+                urlRewrite:
+                  path:
+                    type: ReplacePrefixMatch
+                    replacePrefixMatch: /
+            backendRefs:
+              - identifier: code-server
+                port: 12321
+          - backendRefs:
+              - identifier: app
+                port: 8123
     persistence:
       config:
         existingClaim: "ha"
