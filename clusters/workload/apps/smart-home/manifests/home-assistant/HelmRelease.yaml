@@ -31,9 +31,6 @@ spec:
               TZ: Europe/Brussels
               HASS_HTTP_TRUSTED_PROXY_1: 192.168.129.0/23
               HASS_HTTP_TRUSTED_PROXY_2: 10.42.0.0/16
-            envFrom:
-              - secretRef:
-                  name: "ha-secret"
             securityContext:
               allowPrivilegeEscalation: false
               readOnlyRootFilesystem: true
