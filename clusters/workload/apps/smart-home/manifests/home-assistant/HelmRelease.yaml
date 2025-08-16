@@ -29,8 +29,12 @@ spec:
               tag: 2025.8.2@sha256:285c0e289127e85a31e71b20b3529195cd859a19e34b8a05189ffb1ff391c345
             env:
               TZ: Europe/Brussels
-              HASS_HTTP_TRUSTED_PROXY_1: 10.244.0.48
-              HASS_HTTP_TRUSTED_PROXY_2: 10.42.0.0/16
+              HASS_SERVER: http://localhost:8123
+            #   HASS_HTTP_TRUSTED_PROXY_1: 10.244.0.48
+            #   HASS_HTTP_TRUSTED_PROXY_2: 10.42.0.0/16
+            # envFrom:
+            #   - secretRef:
+            #       name: "ha-secret"
             securityContext:
               allowPrivilegeEscalation: false
               readOnlyRootFilesystem: true
@@ -62,10 +66,10 @@ spec:
             namespace: kube-system
             sectionName: https-ha
     persistence:
-      config:
-        existingClaim: "ha"
-        globalMounts:
-          - path: /config
+      # config:
+      #   existingClaim: "ha"
+      #   globalMounts:
+      #     - path: /config
       config-cache:
         existingClaim: "home-assistant-cache"
         globalMounts:
