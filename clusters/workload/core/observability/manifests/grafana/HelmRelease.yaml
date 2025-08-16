@@ -62,7 +62,7 @@ spec:
             uid: loki
             access: proxy
             url: http://loki.observability.svc.cluster.local:3100
-            isDefault: true
+            isDefault: false
     plugins:
       - grafana-clock-panel
       - grafana-piechart-panel
