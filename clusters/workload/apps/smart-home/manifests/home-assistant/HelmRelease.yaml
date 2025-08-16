@@ -66,10 +66,10 @@ spec:
             namespace: kube-system
             sectionName: https-ha
     persistence:
-      # config:
-      #   existingClaim: "ha"
-      #   globalMounts:
-      #     - path: /config
+      config:
+        existingClaim: "ha"
+        globalMounts:
+          - path: /config
       config-cache:
         existingClaim: "home-assistant-cache"
         globalMounts:
