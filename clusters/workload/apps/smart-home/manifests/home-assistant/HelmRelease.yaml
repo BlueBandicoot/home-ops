@@ -56,6 +56,8 @@ spec:
         ports:
           http:
             port: 8123
+        annotations:
+          lbipam.cilium.io/ips: 192.168.129.135
     route:
       app:
         hostnames:
