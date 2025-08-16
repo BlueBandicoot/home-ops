@@ -69,3 +69,15 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
+    - name: https-node-red
+      protocol: HTTPS
+      port: 443
+      hostname: "node-red.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: tls-secret-node-red
+      allowedRoutes:
+        namespaces:
+          from: All
