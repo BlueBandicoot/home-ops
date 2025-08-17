@@ -78,22 +78,22 @@ spec:
               PAPERLESS_DBUSRR:
                 valueFrom:
                   secretKeyRef:
-                    name: *db_secret
+                    name: database-mealie
                     key: USERNAME
               PAPERLESS_DBPASS:
                 valueFrom:
                   secretKeyRef:
-                    name: *db_secret
+                    name: database-mealie
                     key: PASSWORD
               PAPERLESS_DBNAME:
                 valueFrom:
                   secretKeyRef:
-                    name: *db_secret
+                    name: database-mealie
                     key: DATABASE_NAME
               POSTGRES_SERVER:
                 valueFrom:
                   secretKeyRef:
-                    name: *db_secret
+                    name: database-mealie
                     key: HOST
               PAPERLESS_DBPORT: 5432
             resources:
