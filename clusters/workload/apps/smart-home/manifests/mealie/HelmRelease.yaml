@@ -37,6 +37,27 @@ spec:
               MAX_WORKERS: 1
               WEB_CONCURRENCY: 1
               DB_ENGINE: postgres
+              POSTGRES_DB:
+                valueFrom:
+                  secretKeyRef:
+                    name: &db_secret database-mealie
+                    key: DATABASE_NAME
+              POSTGRES_USER:
+                valueFrom:
+                  secretKeyRef:
+                    name: *db_secret
+                    key: USERNAME
+              POSTGRES_PASSWORD:
+                valueFrom:
+                  secretKeyRef:
+                    name: *db_secret
+                    key: PASSWORD
+              POSTGRES_SERVER:
+                valueFrom:
+                  secretKeyRef:
+                    name: *db_secret
+                    key: HOST
+              POSTGRES_PORT: 5432
     service:
       app:
         controller: *app
