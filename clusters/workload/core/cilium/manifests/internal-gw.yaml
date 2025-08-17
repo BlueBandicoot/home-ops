@@ -81,3 +81,15 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
+    - name: https-mealie
+      protocol: HTTPS
+      port: 443
+      hostname: "mealie.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: tls-secret-mealie
+      allowedRoutes:
+        namespaces:
+          from: All
