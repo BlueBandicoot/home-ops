@@ -93,3 +93,15 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
+    - name: https-paperless
+      protocol: HTTPS
+      port: 443
+      hostname: "paperless.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: tls-secret-paperless
+      allowedRoutes:
+        namespaces:
+          from: All
