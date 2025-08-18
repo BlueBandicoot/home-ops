@@ -105,7 +105,7 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
-    - name: https-paperless
+    - name: https-adguard
       protocol: HTTPS
       port: 443
       hostname: "adguard.kharnox.com"
