@@ -34,7 +34,7 @@ spec:
         controller: adguard
         type: LoadBalancer
         annotations:
-          lbipam.cilium.io/ips: 192.168.129.201
+          lbipam.cilium.io/ips: 192.168.129.200
           lbipam.cilium.io/sharing-key: "adguard-home"
         ports:
           http:
