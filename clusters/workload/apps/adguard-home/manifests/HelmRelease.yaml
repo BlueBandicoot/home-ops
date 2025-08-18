@@ -59,3 +59,9 @@ spec:
         existingClaim: adguard-conf
         globalMounts:
           - path: /opt/adguardhome/conf
+      work:
+        enabled: true
+        existingClaim: adguard-work
+        size: 5Gi
+        globalMounts:
+          - path: /opt/adguardhome/work
