@@ -63,12 +63,10 @@ spec:
             sectionName: https-adguard
     persistence:
       config:
-        enabled: true
         existingClaim: adguard-conf
         globalMounts:
           - path: /opt/adguardhome/conf
       work:
-        enabled: true
         existingClaim: adguard-work
         globalMounts:
           - path: /opt/adguardhome/work
