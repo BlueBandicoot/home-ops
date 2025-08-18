@@ -17,3 +17,4 @@ resources:
   - ./spegel.yaml
   - ./truecharts.yaml
   - ./stakater.yaml
+  - ./bitnami.yaml
