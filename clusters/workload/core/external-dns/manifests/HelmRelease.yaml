@@ -58,3 +58,9 @@ spec:
                 key: password
           - name: DRY_RUN
             value: "false"
+    sources: ["gateway-httproute", "service"]
+    txtOwnerId: main
+    txtPrefix: k8s.main.
+    domainFilters: ["kharnox.com"]
+    serviceMonitor:
+      enabled: true
