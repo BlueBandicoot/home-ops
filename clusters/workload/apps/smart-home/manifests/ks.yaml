@@ -12,7 +12,15 @@ spec:
   healthChecks:
     - apiVersion: helm.toolkit.fluxcd.io/v2
       kind: HelmRelease
-      name: smart-home
+      name: home-assistant
+      namespace: *namespace
+    - apiVersion: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: node-red
+      namespace: *namespace
+    - apiVersion: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: mealie
       namespace: *namespace
   interval: 1h
   path: ./clusters/workload/apps/smart-home/manifests
