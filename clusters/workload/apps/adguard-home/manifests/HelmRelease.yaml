@@ -70,6 +70,5 @@ spec:
       work:
         enabled: true
         existingClaim: adguard-work
-        size: 5Gi
         globalMounts:
           - path: /opt/adguardhome/work
