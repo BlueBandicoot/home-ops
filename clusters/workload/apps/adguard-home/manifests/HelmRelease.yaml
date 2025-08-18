@@ -39,7 +39,7 @@ spec:
         controller: adguard
         type: LoadBalancer
         annotations:
-          io.cilium/lb-ipam-ips: 192.168.129.200
+          io.cilium/lb-ipam-ips: 192.168.129.201
         ports:
           dns-https:
             port: 443
