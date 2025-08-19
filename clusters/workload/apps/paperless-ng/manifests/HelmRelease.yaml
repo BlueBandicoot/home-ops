@@ -69,7 +69,7 @@ spec:
               PAPERLESS_CONSUMER_RECURSIVE: true
               PAPERLESS_OCR_LANGUAGE: eng
               PAPERLESS_DBENGINE: postgresql
-              PAPERLESS_DBUSRR:
+              PAPERLESS_DBUSER:
                 valueFrom:
                   secretKeyRef:
                     name: database-paperless
@@ -84,7 +84,7 @@ spec:
                   secretKeyRef:
                     name: database-paperless
                     key: DATABASE_NAME
-              POSTGRES_SERVER:
+              PAPERLESS_DBHOST:
                 valueFrom:
                   secretKeyRef:
                     name: database-paperless
