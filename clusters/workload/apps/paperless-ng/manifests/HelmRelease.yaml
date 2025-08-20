@@ -73,22 +73,22 @@ spec:
                 valueFrom:
                   secretKeyRef:
                     name: database-paperless
-                    key: USERNAME
+                    key: username
               PAPERLESS_DBPASS:
                 valueFrom:
                   secretKeyRef:
                     name: database-paperless
-                    key: PASSWORD
+                    key: password
               PAPERLESS_DBNAME:
                 valueFrom:
                   secretKeyRef:
                     name: database-paperless
-                    key: DATABASE_NAME
+                    key: database_name
               PAPERLESS_DBHOST:
                 valueFrom:
                   secretKeyRef:
                     name: database-paperless
-                    key: HOST
+                    key: host
               PAPERLESS_DBPORT: 5432
             resources:
               requests:
