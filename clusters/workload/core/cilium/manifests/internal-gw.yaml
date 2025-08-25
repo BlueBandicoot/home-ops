@@ -117,3 +117,15 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
+    - name: https-wg
+      protocol: HTTPS
+      port: 443
+      hostname: "wg.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: tls-secret-adguard
+      allowedRoutes:
+        namespaces:
+          from: All
