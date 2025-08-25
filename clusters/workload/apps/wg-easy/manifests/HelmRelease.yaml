@@ -82,7 +82,10 @@ spec:
           - name: internal
             namespace: kube-system
             sectionName: https-wg
-
+        rules:
+          - backendRefs:
+              - identifier: ui
+                port: *uiPort
     persistence:
       config:
         enabled: true
