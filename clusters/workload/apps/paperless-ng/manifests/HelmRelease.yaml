@@ -115,3 +115,8 @@ spec:
         existingClaim: paperless-ngx
         globalMounts:
           - path: /data
+      data:
+        enabled: true
+        existingClaim: paperless-ngx-data
+        globalMounts:
+          - path: /library
