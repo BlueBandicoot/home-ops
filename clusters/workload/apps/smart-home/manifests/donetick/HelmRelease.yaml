@@ -91,6 +91,10 @@ spec:
             sectionName: https-donetick
     persistence:
       config:
-        existingClaim: donetick
+        existingClaim: donetick-conf
         globalMounts:
           - path: /config
+      data:
+        existingClaim: donetick-data
+        globalMounts:
+          - path: /donetick-data
