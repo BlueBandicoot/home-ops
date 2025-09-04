@@ -31,7 +31,7 @@ spec:
               - name: DT_ENV
                 value: selfhosted
               - name: DT_DATABASE_HOST
-                value: donetick-cluster-rw
+                value: db-donetick-rw
               - name: DT_DATABASE_PORT
                 value: 5432
               - name: DT_DATABASE_USER
