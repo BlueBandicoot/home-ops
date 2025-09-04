@@ -129,3 +129,15 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
+    - name: https-donetick
+      protocol: HTTPS
+      port: 443
+      hostname: "dt.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: tls-secret-donetick
+      allowedRoutes:
+        namespaces:
+          from: All
