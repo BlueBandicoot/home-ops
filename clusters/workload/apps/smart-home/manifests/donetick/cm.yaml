@@ -22,7 +22,7 @@ data:
       password: "secret"
       name: "secret"
     jwt:
-      secret: "change_this_to_a_secure_random_string_32_characters_long"
+      secret: "iLPV12xAqAo4zyr_mqXfRjhKuDftDgeFwN5zGyEKn1s="
       session_time: 168h
       max_refresh: 168h
     server:
