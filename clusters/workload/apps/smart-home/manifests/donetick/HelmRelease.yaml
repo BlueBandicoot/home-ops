@@ -93,4 +93,4 @@ spec:
       config:
         existingClaim: donetick
         globalMounts:
-          - path: /donetick-data
+          - path: /config
