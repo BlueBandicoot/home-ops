@@ -38,12 +38,12 @@ spec:
                 valueFrom:
                   secretKeyRef:
                     name: database-donetick
-                    key: PASSWORD
+                    key: username
               - name: DT_DATABASE_PASSWORD
                 valueFrom:
                   secretKeyRef:
                     name: database-donetick
-                    key: PASSWORD
+                    key: password
               - name: DT_DATABASE_NAME
                 value: donetick
             probes:
