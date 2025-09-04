@@ -91,9 +91,12 @@ spec:
             sectionName: https-donetick
     persistence:
       config:
-        existingClaim: donetick-conf
+        type: configMap
+        name: donetick-config
         globalMounts:
-          - path: /config
+          - path: "/config/selfhosted.yaml"
+            subPath: selfhosted.yaml
+            readOnly: true
       data:
         existingClaim: donetick-data
         globalMounts:
