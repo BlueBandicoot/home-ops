@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: donetick-config
-  namespace: donetick
+  namespace: smart-home
 data:
   selfhosted.yaml: |
     name: "selfhosted"
