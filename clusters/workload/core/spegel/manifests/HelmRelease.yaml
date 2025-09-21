@@ -10,6 +10,7 @@ spec:
   chart:
     spec:
       chart: spegel
+      version: "v0.4.0"
       interval: 5m
       sourceRef:
         kind: HelmRepository
