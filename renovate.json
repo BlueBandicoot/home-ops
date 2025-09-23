@@ -3,11 +3,12 @@
   "extends": [
     "config:recommended",
     "docker:enableMajor",
+    "docker:pinDigests",
     "helpers:pinGitHubActionDigests",
     ":disableRateLimiting",
     ":dependencyDashboard",
     ":semanticCommits",
-    ":timezone(America/New_York)"
+    ":timezone(Europe/Brussels)"
   ],
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
