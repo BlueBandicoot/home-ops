@@ -282,7 +282,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/kubescape/tree/master/httphandler (public repo)
         repository: quay.io/kubescape/kubescape
-        tag: v3.0.41
+        tag: v3.0.41@sha256:779f0b5eb563bb7b466cd9d2912695067bd7cc701c75fd82637dda682a328267
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -339,7 +339,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/operator
         repository: quay.io/kubescape/operator
-        tag: v0.2.108
+        tag: v0.2.108@sha256:64ea56da5f5f86131e9ac1aee1aa5940e9211fefdd05c790764a1f0a7624e2d9
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -387,7 +387,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/kubevuln
         repository: quay.io/kubescape/kubevuln
-        tag: v0.3.92
+        tag: v0.3.92@sha256:e7d6254313a34c4100441db1cab687d5e09de10a7d3063cd5e7aeb715e7509da
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -448,7 +448,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/host-scanner (public repo)
         repository: quay.io/kubescape/host-scanner
-        tag: v1.0.76
+        tag: v1.0.76@sha256:46ff1f86b073ecb7602e1c6390e13a66a6323324770f9bf36a585464a2c060dd
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -494,7 +494,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/storage
         repository: quay.io/kubescape/storage
-        tag: v0.0.220
+        tag: v0.0.220@sha256:63b53577e99b2b9620ea2b5f893676b2ee11e6a7573b9759b3e84bcb357c74e5
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -558,7 +558,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/node-agent
         repository: quay.io/kubescape/node-agent
-        tag: v0.2.393
+        tag: v0.2.393@sha256:7fa8b351ea2190c1d7abf2eabd9dfb29e86f096b039f2044d24c03fc7db44329
         pullPolicy: IfNotPresent
 
       config:
@@ -730,7 +730,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/node-agent/tree/main/clamav
         repository: quay.io/kubescape/klamav
-        tag: 1.3.1-34_alpha
+        tag: 1.3.1-34_alpha@sha256:511664b4af57d1e0a8125a048774224a15821fa6e0089ee1a5f26116e714d6ce
         pullPolicy: IfNotPresent
 
       resources:
@@ -785,7 +785,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/synchronizer
         repository: quay.io/kubescape/synchronizer
-        tag: v0.0.116
+        tag: v0.0.116@sha256:293320c9e6c4a933f3d7028e65705a0d3aa6b3feda3acea486b858110fc621ae
         pullPolicy: IfNotPresent
       nodeSelector:
         kubernetes.io/os: linux
@@ -827,7 +827,7 @@ spec:
 
       image:
         repository: quay.io/kubescape/opentelemetry-collector
-        tag: 0.108.0
+        tag: 0.108.0@sha256:241f629c92fb6785f6e3d4fe5ab6a88604f18966bf0a9151077d8de9cd0d0d43
         pullPolicy: IfNotPresent
 
       podAnnotations: {}
@@ -849,7 +849,7 @@ spec:
 
       image:
         repository: quay.io/kubescape/grype-offline-db
-        tag: "" # use latest for weekly updates, it will overwrite the sha if specified
+        tag: "@sha256:352da0daa60738604a06b08ddfc5b2e511bcc0cf03d913ce92a4c3c689e4f126" # use latest for weekly updates, it will overwrite the sha if specified
         sha: sha256:56468cbe92622770860f5c2f96b43aca836f6466c1c95116a107d461f8de8592
         pullPolicy: Always
 
@@ -879,7 +879,7 @@ spec:
         name: url-discovery
         image:
           repository: quay.io/kubescape/http-request
-          tag: v0.2.14
+          tag: v0.2.14@sha256:2aae7b38b5e402fd374fd1bbad8bbaa318bc55ec37b25f9355dfa08a64682fd5
           pullPolicy: IfNotPresent
 
         # Skip SSL certificate verification
@@ -889,7 +889,7 @@ spec:
         name: update-configmap
         image:
           repository: quay.io/kubescape/kubectl
-          tag: 1.30.3
+          tag: 1.30.3@sha256:fc6e48522aa4417275d6fa92bd820f426bbf27454c80b327c449ef6e32467bd3
           pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -912,7 +912,7 @@ spec:
       name: "prometheus-exporter"
       image:
         repository: quay.io/kubescape/prometheus-exporter
-        tag: v0.2.8
+        tag: v0.2.8@sha256:65f5bc0da0c6c3d775312b8ed0fe9bf4867ff276615e7ba772d07c2ca9ba3ee6
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -948,7 +948,7 @@ spec:
       name: "helm-release-upgrader"
       image:
         repository: quay.io/kubescape/helm-release-upgrader
-        tag: v0.1.0
+        tag: v0.1.0@sha256:76ac939a338d3b44f9cadcee3879f5575f33c9dfcf6dd8dda72573f30fead587
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -1012,7 +1012,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/http-request (public repo)
         repository: quay.io/kubescape/http-request
-        tag: v0.2.14
+        tag: v0.2.14@sha256:2aae7b38b5e402fd374fd1bbad8bbaa318bc55ec37b25f9355dfa08a64682fd5
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -1059,7 +1059,7 @@ spec:
       image:
         # source code - https://github.com/kubescape/http-request
         repository: quay.io/kubescape/http-request
-        tag: v0.2.14
+        tag: v0.2.14@sha256:2aae7b38b5e402fd374fd1bbad8bbaa318bc55ec37b25f9355dfa08a64682fd5
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -1108,7 +1108,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/http-request (public repo)
         repository: quay.io/kubescape/http-request
-        tag: v0.2.14
+        tag: v0.2.14@sha256:2aae7b38b5e402fd374fd1bbad8bbaa318bc55ec37b25f9355dfa08a64682fd5
         pullPolicy: IfNotPresent
 
       nodeSelector:
