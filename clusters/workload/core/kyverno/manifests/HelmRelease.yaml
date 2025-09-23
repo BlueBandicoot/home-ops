@@ -505,7 +505,7 @@ spec:
         repository: busybox
         # -- Image tag
         # Defaults to `latest` if omitted
-        tag: '1.37'
+        tag: '1.37@sha256:d82f458899c9696cb26a7c02d5568f81c8c8223f8661bb2a7988b269c8b9051e'
         # -- (string) Image pull policy
         # Defaults to image.pullPolicy if omitted
         pullPolicy: ~
@@ -565,7 +565,7 @@ spec:
         repository: bitnami/kubectl
         # -- Image tag
         # Defaults to `latest` if omitted
-        tag: '1.33.4'
+        tag: '1.33.4@sha256:ed0b31a0508da84ee655c5c6e01bd3897fc56ad6cf69debb27fa1893a06d2246'
         # -- (string) Image pull policy
         # Defaults to image.pullPolicy if omitted
         pullPolicy: ~
@@ -636,7 +636,7 @@ spec:
         repository: bitnami/kubectl
         # -- Image tag
         # Defaults to `latest` if omitted
-        tag: '1.33.4'
+        tag: '1.33.4@sha256:ed0b31a0508da84ee655c5c6e01bd3897fc56ad6cf69debb27fa1893a06d2246'
         # -- (string) Image pull policy
         # Defaults to image.pullPolicy if omitted
         pullPolicy: ~
