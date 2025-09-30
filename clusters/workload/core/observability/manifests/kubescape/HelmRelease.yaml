@@ -448,7 +448,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/host-scanner (public repo)
         repository: quay.io/kubescape/host-scanner
-        tag: v1.0.76@sha256:46ff1f86b073ecb7602e1c6390e13a66a6323324770f9bf36a585464a2c060dd
+        tag: v1.0.77@sha256:6e6a95fdb02e2ee1be1272a4a1f3d8337686ca6560c5693a354ca3a06c6e8ea4
         pullPolicy: IfNotPresent
 
       nodeSelector:
