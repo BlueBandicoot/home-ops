@@ -912,7 +912,7 @@ spec:
       name: "prometheus-exporter"
       image:
         repository: quay.io/kubescape/prometheus-exporter
-        tag: v0.2.8@sha256:65f5bc0da0c6c3d775312b8ed0fe9bf4867ff276615e7ba772d07c2ca9ba3ee6
+        tag: v0.2.10@sha256:d39e31604aad988b0ac8ad9ac6ed4672b66937a976c8eaf112b7a93ab6581ab4
         pullPolicy: IfNotPresent
 
       nodeSelector:
