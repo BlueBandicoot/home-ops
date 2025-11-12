@@ -785,7 +785,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/synchronizer
         repository: quay.io/kubescape/synchronizer
-        tag: v0.0.116@sha256:293320c9e6c4a933f3d7028e65705a0d3aa6b3feda3acea486b858110fc621ae
+        tag: v0.0.118@sha256:6bc85e0ac37b5305f0facd4d7d5410bde3d96730219d8c2c192915a6482d7a51
         pullPolicy: IfNotPresent
       nodeSelector:
         kubernetes.io/os: linux
