@@ -33,7 +33,7 @@ spec:
           redis:
             image:
               repository: public.ecr.aws/docker/library/redis
-              tag: 8.2.3@sha256:5c7c0445ed86918cb9efb96d95a6bfc03ed2059fe2c5f02b4d74f477ffe47915
+              tag: 8.4.0@sha256:39debd9bd83500468d5014f4f2b7fb16711c849287d35f66b6d2d9c6b1623972
               pullPolicy: IfNotPresent
           tika:
             image:
