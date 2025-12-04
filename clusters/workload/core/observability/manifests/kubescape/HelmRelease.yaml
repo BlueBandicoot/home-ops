@@ -879,7 +879,7 @@ spec:
         name: url-discovery
         image:
           repository: quay.io/kubescape/http-request
-          tag: v0.2.15@sha256:b64acf486308ce4c35d878585b6641b76b9b4a3e46e5807e221de9b068058f17
+          tag: v0.2.16@sha256:2e4ef05566599c910fd8f642cbb9de59068035ce9d36905377b5f7ea3228d601
           pullPolicy: IfNotPresent
 
         # Skip SSL certificate verification
@@ -1012,7 +1012,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/http-request (public repo)
         repository: quay.io/kubescape/http-request
-        tag: v0.2.15@sha256:b64acf486308ce4c35d878585b6641b76b9b4a3e46e5807e221de9b068058f17
+        tag: v0.2.16@sha256:2e4ef05566599c910fd8f642cbb9de59068035ce9d36905377b5f7ea3228d601
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -1059,7 +1059,7 @@ spec:
       image:
         # source code - https://github.com/kubescape/http-request
         repository: quay.io/kubescape/http-request
-        tag: v0.2.15@sha256:b64acf486308ce4c35d878585b6641b76b9b4a3e46e5807e221de9b068058f17
+        tag: v0.2.16@sha256:2e4ef05566599c910fd8f642cbb9de59068035ce9d36905377b5f7ea3228d601
         pullPolicy: IfNotPresent
 
       nodeSelector:
@@ -1108,7 +1108,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/http-request (public repo)
         repository: quay.io/kubescape/http-request
-        tag: v0.2.15@sha256:b64acf486308ce4c35d878585b6641b76b9b4a3e46e5807e221de9b068058f17
+        tag: v0.2.16@sha256:2e4ef05566599c910fd8f642cbb9de59068035ce9d36905377b5f7ea3228d601
         pullPolicy: IfNotPresent
 
       nodeSelector:
