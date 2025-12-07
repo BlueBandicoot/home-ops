@@ -849,7 +849,7 @@ spec:
 
       image:
         repository: quay.io/kubescape/grype-offline-db
-        tag: "@sha256:630131c7baab64c212e8e43406f6eda20d1c45d6ee11dd6ffed963c7e294f67b" # use latest for weekly updates, it will overwrite the sha if specified
+        tag: "@sha256:467b3e844a09ea06328cec54542463821c0ddad205698a8728d55e2b6bfcc7af" # use latest for weekly updates, it will overwrite the sha if specified
         sha: sha256:56468cbe92622770860f5c2f96b43aca836f6466c1c95116a107d461f8de8592
         pullPolicy: Always
 
