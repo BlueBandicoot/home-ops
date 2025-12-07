@@ -282,7 +282,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/kubescape/tree/master/httphandler (public repo)
         repository: quay.io/kubescape/kubescape
-        tag: v3.0.45@sha256:74331735c10e04e0ba53b77710ea8ebb118130b9c0eee25515b824a46b187f96
+        tag: v3.0.46@sha256:cb7b5217003eb61af5caf6db896b437e8a0fd689463e884dc8bf607870f49295
         pullPolicy: IfNotPresent
 
       nodeSelector:
