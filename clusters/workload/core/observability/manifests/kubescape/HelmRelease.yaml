@@ -339,7 +339,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/operator
         repository: quay.io/kubescape/operator
-        tag: v0.2.118@sha256:8415b9365878ceec61fb84374b886f3aaa7e925d93269bffd267fe01cb90d31b
+        tag: v0.2.119@sha256:850f32fdad6ad19ce47d4ad382789bb482446c0fee7c7ef02620955c13bf6617
         pullPolicy: IfNotPresent
 
       nodeSelector:
