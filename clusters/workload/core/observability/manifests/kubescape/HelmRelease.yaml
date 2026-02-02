@@ -494,7 +494,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/storage
         repository: quay.io/kubescape/storage
-        tag: v0.0.230@sha256:0873f155ec39d6378e6a839a7acf151a4ff43f09c37509e91d931afa607f54a9
+        tag: v0.0.239@sha256:43d4a1e90c92cd29885ddef37e07239cd3305496f1deb3f5756bfb6fb3686f52
         pullPolicy: IfNotPresent
 
       nodeSelector:
