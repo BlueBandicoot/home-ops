@@ -387,7 +387,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/kubevuln
         repository: quay.io/kubescape/kubevuln
-        tag: v0.3.98@sha256:05dd037e8d0a6c2c9a8ca9974b88d1a01062ae80cab0379f20fb214848d4ecab
+        tag: v0.3.104@sha256:8fefc86941d3bce5e09f76e9c838374d5d8f47f2b72b9e071f951c8b4cea4e1c
         pullPolicy: IfNotPresent
 
       nodeSelector:
