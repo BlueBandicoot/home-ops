@@ -558,7 +558,7 @@ spec:
       image:
         # -- source code: https://github.com/kubescape/node-agent
         repository: quay.io/kubescape/node-agent
-        tag: v0.3.32@sha256:9405412f1a2b4e2791e2330c13d055b84157b07fc6963352f3bd0c49293c9984
+        tag: v0.3.36@sha256:f0688e08cd109657881ce790e987f6773577d65cba627135dc513f48da49cea6
         pullPolicy: IfNotPresent
 
       config:
