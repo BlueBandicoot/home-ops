@@ -24,7 +24,6 @@ spec:
       enabled: true
     csi:
       cephFSKernelMountOptions: ms_mode=prefer-crc
-      # NOTE: Enable the driver and shapshotter if you want to use CephFS
       enableCephfsDriver: false
       enableCephfsSnapshotter: false
       enableLiveness: true
@@ -41,7 +40,6 @@ spec:
         cpu: 100m # unchangable
       limits: {}
 ---
-# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/helm.toolkit.fluxcd.io/helmrelease_v2.json
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
@@ -88,7 +86,6 @@ spec:
             memory: "1Gi"
       cephConfig:
         global:
-          osd_memory_target: "2147483648"
           bdev_enable_discard: "true"
           bdev_async_discard_threads: "1"
           osd_class_update_on_start: "false"
