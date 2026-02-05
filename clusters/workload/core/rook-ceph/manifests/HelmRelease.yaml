@@ -67,6 +67,25 @@ spec:
   values:
     operatorNamespace: rook-ceph
     cephClusterSpec:
+      resources:
+        osd:
+          limits:
+            memory: "4Gi"
+          requests:
+            cpu: "500m"
+            memory: "2Gi"
+        mgr:
+          limits:
+            memory: "1Gi"
+          requests:
+            cpu: "100m"
+            memory: "512Mi"
+        mon:
+          limits:
+            memory: "2Gi"
+          requests:
+            cpu: "200m"
+            memory: "1Gi"
       cephConfig:
         global:
           osd_memory_target: "2147483648"
