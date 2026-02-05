@@ -86,6 +86,7 @@ spec:
             memory: "1Gi"
       cephConfig:
         global:
+          osd_memory_target: "2147483648"
           bdev_enable_discard: "true"
           bdev_async_discard_threads: "1"
           osd_class_update_on_start: "false"
