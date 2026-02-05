@@ -16,3 +16,13 @@ spec:
       owner: donetick
       secret:
         name: database-donetick
+  resources:
+      requests:
+        cpu: 100m
+        memory: 512Mi
+      limits:
+        memory: 1Gi
+  postgresql:
+    parameters:
+      shared_buffers: "256MB" 
+      work_mem: "8MB"
