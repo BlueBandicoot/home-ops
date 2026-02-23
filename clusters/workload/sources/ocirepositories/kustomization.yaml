@@ -6,7 +6,4 @@ metadata:
   name: sources-oci
   namespace: flux-system
 resources:
-  - ./grafana.yaml
-  - ./loki.yaml
-  - ./alloy.yaml
   - ./app-template.yaml
