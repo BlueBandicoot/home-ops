@@ -67,3 +67,7 @@ spec:
         create: true
     hubble:
       enabled: false
+    bpf:
+      masquerade: false
+    hostFirewall:
+      enabled: false
