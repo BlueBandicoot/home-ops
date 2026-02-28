@@ -17,11 +17,12 @@ spec:
       secret:
         name: database-paperless
   resources:
-      requests:
-        cpu: 100m
-        memory: 512Mi
-      limits:
-        memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 512Mi
+    limits:
+      cpu: 1000m
+      memory: 1Gi
   postgresql:
     parameters:
       shared_buffers: "256MB" 

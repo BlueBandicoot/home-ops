@@ -43,7 +43,9 @@ spec:
             resources:
               requests:
                 cpu: 10m
+                memory: 512Mi
               limits:
+                cpu: 1000m
                 memory: 2Gi
           code-server:
             image:
@@ -70,7 +72,9 @@ spec:
             resources:
               requests:
                 cpu: 10m
+                memory: 256Mi
               limits:
+                cpu: 1000m
                 memory: 1Gi
 
     defaultPodOptions:

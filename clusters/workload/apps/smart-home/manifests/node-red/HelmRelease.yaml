@@ -40,9 +40,10 @@ spec:
               NODE_RED_ENABLE_SAFE_MODE: "false"
             resources:
               requests:
-                memory: 350Mi
                 cpu: 150m
+                memory: 350Mi
               limits:
+                cpu: 1000m
                 memory: 1Gi
     service:
       main:
