@@ -17,5 +17,5 @@ resources:
   - ./spegel.yaml
   - ./truecharts.yaml
   - ./stakater.yaml
-  - ./bitnami.yaml
+  - ./external-dns.yaml
   - ./kubescape.yaml
