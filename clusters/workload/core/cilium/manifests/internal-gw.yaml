@@ -141,3 +141,15 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
+    - name: https-hubble
+      protocol: HTTPS
+      port: 443
+      hostname: "hubble.kharnox.com"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: tls-secret-hubble
+      allowedRoutes:
+        namespaces:
+          from: All
