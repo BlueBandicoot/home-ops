@@ -1,0 +1,54 @@
+name: Security Scan
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  image-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Trivy
+        run: |
+          sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+          wget -qO - https://aquasecurity.github.io/trivy-repo/dabest/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+          echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/dabest/almalinux 9 main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+          # Actually, it's easier to just use the binary or the docker image correctly.
+          # Let's use the binary via the official installer for simplicity in a script.
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.50.1
+
+      - name: Extract and Scan Images
+        run: |
+          # Extract all images in format repository:tag using yq
+          # We look for any object that has both 'repository' and 'tag' keys
+          IMAGES=$(find . -name "*.yaml" -not -path "*/.git/*" -exec yq eval-all '.. | select(has("repository") and has("tag")) | .repository + ":" + .tag' {} + | sort -u)
+          
+          if [ -z "$IMAGES" ]; then
+            echo "No images found to scan."
+            exit 0
+          fi
+
+          echo "Found images to scan:"
+          echo "$IMAGES"
+          
+          EXIT_CODE=0
+          for IMAGE in $IMAGES; do
+            echo "----------------------------------------------------------------------"
+            echo "Scanning $IMAGE..."
+            # Strip anything after @ if it exists (for sha256 digests)
+            IMAGE_TO_SCAN=$(echo $IMAGE | cut -d'@' -f1)
+            
+            # Run trivy. We use --exit-code 1 to fail the build if vulnerabilities are found.
+            # However, we might want to collect all results first.
+            if ! trivy image --severity HIGH,CRITICAL --exit-code 1 --quiet "$IMAGE_TO_SCAN"; then
+              echo "❌ Vulnerabilities found in $IMAGE"
+              EXIT_CODE=1
+            else
+              echo "✅ No HIGH or CRITICAL vulnerabilities found in $IMAGE"
+            fi
+          done
+          
+          exit $EXIT_CODE
