@@ -62,5 +62,5 @@ spec:
     txtOwnerId: main
     txtPrefix: k8s.main.
     domainFilters: ["kharnox.com"]
-    serviceMonitor:
-      enabled: true
+#    serviceMonitor:
+#      enabled: true
