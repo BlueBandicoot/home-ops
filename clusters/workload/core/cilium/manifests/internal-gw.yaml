@@ -125,7 +125,7 @@ spec:
         mode: Terminate
         certificateRefs:
           - kind: Secret
-            name: tls-secret-adguard
+            name: tls-secret-wg
       allowedRoutes:
         namespaces:
           from: All
