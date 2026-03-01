@@ -15,9 +15,12 @@ spec:
         namespace: flux-system
   interval: 1m0s
   values:
-    provider: webhook
-    extraArgs:
-      webhook-provider-url: http://localhost:8888
+    provider: 
+      name: webhook
+      webhook:
+        image:
+          repository: ghcr.io/muhlba91/external-dns-provider-adguard
+          tag: v11.0.2@sha256:162561ce7af084ee736a4c62c0bd3c0f12a3842d0ca8d96ac3665c15ef05add8
     sidecars:
       - name: adguard-webhook
         image: ghcr.io/muhlba91/external-dns-provider-adguard:v11.0.2@sha256:162561ce7af084ee736a4c62c0bd3c0f12a3842d0ca8d96ac3665c15ef05add8
