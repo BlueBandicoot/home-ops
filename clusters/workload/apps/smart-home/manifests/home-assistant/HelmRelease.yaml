@@ -125,10 +125,10 @@ spec:
         existingClaim: "ha"
         globalMounts:
           - path: /config
-      config-cache:
-        existingClaim: "home-assistant-cache"
-        globalMounts:
-          - path: /config/.venv
+      #config-cache:
+      #  existingClaim: "home-assistant-cache"
+      #  globalMounts:
+      #    - path: /config/.venv
       tmpfs:
         type: emptyDir
         advancedMounts:
