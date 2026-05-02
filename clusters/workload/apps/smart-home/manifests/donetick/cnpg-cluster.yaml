@@ -18,7 +18,7 @@ spec:
         name: database-donetick
   resources:
     requests:
-      cpu: 100m
+      cpu: 200m
       memory: 512Mi
     limits:
       cpu: 1000m

@@ -42,8 +42,8 @@ spec:
               capabilities: { drop: ["ALL"] }
             resources:
               requests:
-                cpu: 10m
-                memory: 512Mi
+                cpu: 100m
+                memory: 1Gi
               limits:
                 cpu: 1000m
                 memory: 2Gi
@@ -71,7 +71,7 @@ spec:
               #     key: vscode_hass_token
             resources:
               requests:
-                cpu: 10m
+                cpu: 50m
                 memory: 256Mi
               limits:
                 cpu: 1000m
@@ -125,10 +125,6 @@ spec:
         existingClaim: "ha"
         globalMounts:
           - path: /config
-      #config-cache:
-      #  existingClaim: "home-assistant-cache"
-      #  globalMounts:
-      #    - path: /config/.venv
       tmpfs:
         type: emptyDir
         advancedMounts:
