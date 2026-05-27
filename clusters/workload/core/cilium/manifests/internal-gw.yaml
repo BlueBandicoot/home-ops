@@ -21,6 +21,9 @@ spec:
         certificateRefs:
           - kind: Secret
             name: tls-secret-rook
+      allowedRoutes:
+          namespaces:
+            from: All
     - name: https-prometheus
       protocol: HTTPS
       port: 443
