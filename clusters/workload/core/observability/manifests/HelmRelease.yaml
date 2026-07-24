@@ -9,17 +9,20 @@ spec:
   interval: 1m
   chart:
     spec:
-      chart: victoria-metrics-operator
-      version: "0.66.3"
+      chart: victoria-metrics-k8s-stack
+      version: "0.87.0"
       sourceRef:
         kind: HelmRepository
         name: victoriametrics
         namespace: flux-system
   values:
-    securityContext:
-      runAsNonRoot: true
-      runAsUser: 1000
-      runAsGroup: 1000
-    # Enable deployment validation webhook
-    validation:
+    victoria-metrics-operator:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+      # Enable deployment validation webhook
+      validation:
+        enabled: true
+    grafana:
       enabled: true
