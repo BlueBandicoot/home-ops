@@ -16,6 +16,7 @@ spec:
         name: victoriametrics
         namespace: flux-system
   values:
+    fullnameOverride: vm
     victoria-metrics-operator:
       securityContext:
         runAsNonRoot: true
