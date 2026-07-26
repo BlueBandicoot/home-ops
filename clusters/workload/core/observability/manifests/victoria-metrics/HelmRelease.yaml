@@ -39,6 +39,10 @@ spec:
         enabled: true
     vmsingle:
       enabled: true
+      spec:
+        retentionPeriod: "15d"
+        storage:
+          existingClaim: "vmsingle-data"
     vmagent:
       enabled: true
     vmalert:
