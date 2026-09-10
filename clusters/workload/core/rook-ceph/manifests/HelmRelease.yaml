@@ -65,6 +65,19 @@ spec:
   values:
     operatorNamespace: rook-ceph
     cephClusterSpec:
+      storage:
+        useAllNodes: false
+        useAllDevices: false
+        nodes:
+          - name: cp01
+            devices:
+              - name: sda
+          - name: cp02
+            devices:
+              - name: nvme0n1
+          - name: cp03
+            devices:
+              - name: nvme0n1
       resources:
         osd:
           limits:
