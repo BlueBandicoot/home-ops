@@ -26,7 +26,7 @@ spec:
           app:
             image:
               repository: donetick/donetick
-              tag: v0.1.79@sha256:a1cc21dd5a37acb5009009f13e5d2529153049361afb0a1cd94bde312382d36a
+              tag: v0.1.82@sha256:44fce161cb2cd4c46acb184f76212ed77ed961dca6f4face6528064b9b0f5ca5
             env:
               - name: DT_ENV
                 value: selfhosted
