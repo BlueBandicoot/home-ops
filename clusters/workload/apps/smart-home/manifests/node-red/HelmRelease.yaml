@@ -32,7 +32,7 @@ spec:
           main:
             image:
               repository: nodered/node-red
-              tag: 4.1.14-18-minimal@sha256:5e96c010e28567823c7f0fb11fe58bd14574f535d03a429737e0fa30147eab2d
+              tag: 4.1.17-18-minimal@sha256:d85fd91dc8bb31337917a2ae9d7d28e4161a55b96d3bd15cab0119f6d889f90a
             env:
               TZ: Europe/Brussels
               FLOWS: "flows.json"
